@@ -24,11 +24,14 @@ class LatestTransctionListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: items
-          .map((toElement) =>
-              IntrinsicWidth(child: UserInfoListTile(userInfoModel: toElement)))
-          .toList(),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: items
+            .map((toElement) => IntrinsicWidth(
+                child: UserInfoListTile(userInfoModel: toElement)))
+            .toList(),
+      ),
     );
   }
 }
