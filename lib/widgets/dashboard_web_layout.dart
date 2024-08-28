@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/all_expenses_and_quick_invoice_section.dart';
 import 'package:responsive_dashboard/widgets/custom_drawer.dart';
-import 'package:responsive_dashboard/widgets/my_card_section.dart';
+import 'package:responsive_dashboard/widgets/my_card_and_income_section.dart';
 
 class DashboardWebLayout extends StatelessWidget {
   const DashboardWebLayout({super.key});
@@ -22,7 +22,7 @@ class DashboardWebLayout extends StatelessWidget {
           width: 24,
         ),
         Expanded(
-          child: MyCardSection(),
+          child: MyCardAndIncomeSection(),
         ),
       ],
     );
