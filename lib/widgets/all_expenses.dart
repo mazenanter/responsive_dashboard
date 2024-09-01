@@ -8,11 +8,11 @@ class AllExpenses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomBackgroungContainer(
+    return CustomBackgroungContainer(
       child: Column(
         children: [
-          AllExpensesHeader(),
-          SizedBox(
+          const AllExpensesHeader(),
+          const SizedBox(
             height: 16,
           ),
           AllExpensesItemListView(),
