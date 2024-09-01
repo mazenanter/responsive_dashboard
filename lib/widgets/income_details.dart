@@ -12,6 +12,10 @@ class IncomeDetails extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children:
+          items.map((toElement) => ItemDetails(itemModel: toElement)).toList(),
+    );
     return ListView.builder(
       itemCount: items.length,
       shrinkWrap: true,
@@ -37,11 +41,11 @@ class ItemDetails extends StatelessWidget {
       ),
       title: Text(
         itemModel.title,
-        style: AppStyles.styleRegular16,
+        style: AppStyles.styleRegular16(context),
       ),
       trailing: Text(
         itemModel.value,
-        style: AppStyles.styleMedium16,
+        style: AppStyles.styleMedium16(context),
       ),
     );
   }

@@ -7,24 +7,16 @@ class MyCardAndIncomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: SizedBox(
-            height: 40,
-          ),
+    return const Column(
+      children: [
+        SizedBox(
+          height: 40,
         ),
-        SliverToBoxAdapter(
-          child: MyCardsAndTransctionHistorySection(),
+        MyCardsAndTransctionHistorySection(),
+        SizedBox(
+          height: 24,
         ),
-        SliverToBoxAdapter(
-          child: SizedBox(
-            height: 24,
-          ),
-        ),
-        SliverFillRemaining(
-          child: IncomeSection(),
-        )
+        IncomeSection()
       ],
     );
   }
