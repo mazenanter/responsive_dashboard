@@ -14,9 +14,13 @@ class InActiveDrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(
-        drawerItemModel.title,
-        style: AppStyles.styleRegular16(context),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: AlignmentDirectional.centerStart,
+        child: Text(
+          drawerItemModel.title,
+          style: AppStyles.styleRegular16(context),
+        ),
       ),
       leading: SvgPicture.asset(drawerItemModel.image),
     );
@@ -34,9 +38,13 @@ class ActiveDrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(
-        drawerItemModel.title,
-        style: AppStyles.styleBold16(context),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: AlignmentDirectional.centerStart,
+        child: Text(
+          drawerItemModel.title,
+          style: AppStyles.styleBold16(context),
+        ),
       ),
       leading: SvgPicture.asset(drawerItemModel.image),
       trailing: Container(
